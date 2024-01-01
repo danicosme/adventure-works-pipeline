@@ -1,4 +1,13 @@
 SELECT TOP 5
-	*,
-	CURRENT_TIMESTAMP AS dh_ingestao_bronze
+	SalesOrderID
+	,SalesOrderDetailID
+	,CarrierTrackingNumber
+	,OrderQty
+	,ProductID
+	,SpecialOfferID
+	,UnitPrice
+	,UnitPriceDiscount
+	,LineTotal
+	,ModifiedDate
+	,CURRENT_TIMESTAMP AS dh_ingestao_bronze
 FROM sales.SalesOrderDetail

@@ -82,9 +82,9 @@ def create_partition_cols(df):
     Returns:
         - dataframe com as colunas de partição
     """
-    df['year'] = df['dh_ingestao_bronze'].dt.strftime('%Y')
-    df['month'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m')
-    df['day'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m%d')
+    df['year'] = df['dh_ingestao_bronze'].dt.strftime('%Y').astype('int')
+    df['month'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m').astype('int')
+    df['day'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m%d').astype('int')
 
     return df
 
@@ -127,8 +127,8 @@ def main():
                 df = create_partition_cols(df)
 
                 logger.info(
-                    f"Gravando dataframe {entity_name}:\n{df.head(1)} no s3")
-                write_s3(df, entity)
+                    f"Gravando dataframe {entity_name} no s3:\n{df.head(1)}")
+                write_s3(df, entity_name)
 
             else:
                 logger.warning(f"Dataframe {entity_name} vazio")

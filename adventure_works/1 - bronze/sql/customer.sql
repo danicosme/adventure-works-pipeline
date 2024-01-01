@@ -1,4 +1,9 @@
 SELECT TOP 5
-	*,
-	CURRENT_TIMESTAMP AS dh_ingestao_bronze
+	CustomerID
+	,PersonID
+	,StoreID
+	,TerritoryID
+	,AccountNumber
+	,ModifiedDate
+	,CURRENT_TIMESTAMP AS dh_ingestao_bronze
 FROM sales.customer
