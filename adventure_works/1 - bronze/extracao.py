@@ -82,24 +82,25 @@ def create_partition_cols(df):
     Returns:
         - dataframe com as colunas de partição
     """
-    df['ano'] = df['dh_ingestao_bronze'].dt.strftime('%Y')
-    df['mes'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m')
-    df['dia'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m%d')
+    df['year'] = df['dh_ingestao_bronze'].dt.strftime('%Y').astype('int')
+    df['month'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m').astype('int')
+    df['day'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m%d').astype('int')
 
     return df
 
 
-def write_s3(path):
+def write_s3(df, entity):
     """Salva o dataframe como parquet no s3
 
     Args:
         - caminho do s3
     """
     wr.s3.to_parquet(
-        path=path,
+        path=f's3://adventure-works-bronze/{entity}',
+        df=df,
         dataset=True,
         mode='append',
-        partition_cols=['ano', 'mes', 'dia']
+        partition_cols=['year', 'month', 'day']
     )
 
 
@@ -126,14 +127,14 @@ def main():
                 df = create_partition_cols(df)
 
                 logger.info(
-                    f"Gravando dataframe {entity_name}:\n{df.head(1)} no s3")
-                write_s3(df)
+                    f"Gravando dataframe {entity_name} no s3:\n{df.head(1)}")
+                write_s3(df, entity_name)
 
             else:
                 logger.warning(f"Dataframe {entity_name} vazio")
 
     except Exception as e:
-        logger.error(f'Erro durante o processo de extração do MSSQL {e}')
+        logger.error(f'Erro durante extração e carga na camada bronze: {e}')
 
 
 if __name__ == '__main__':
