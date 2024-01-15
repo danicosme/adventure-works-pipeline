@@ -1,0 +1,44 @@
+{
+    "address":[
+        {
+            "AddressID":"address_id",
+            "type": "int",
+            "key": true
+        },
+        {
+            "AddressLine1":"address_line_1",
+            "type": "string",
+            "key": false
+        },
+        {
+            "AddressLine2":"address_line_2",
+            "type": "string",
+            "key": false
+        }, 
+        {
+            "City":"city",
+            "type": "string",
+            "key": false
+        }, 
+        {
+            "StateProvinceID":"state_province_id",
+            "type": "int",
+            "key": false
+        },
+        {
+            "PostalCode":"postal_code",
+            "type": "string",
+            "key": false
+        }, 
+        {
+            "SpatialLocation":"spatial_location",
+            "type": "string",
+            "key": false
+        }, 
+        {
+            "ModifiedDate":"modified_date",
+            "type": "datetime",
+            "key": false
+        }
+    ]
+}

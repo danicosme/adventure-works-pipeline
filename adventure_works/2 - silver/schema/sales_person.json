@@ -1,0 +1,44 @@
+{
+    "sales_order_person":[
+        {
+            "BusinessEntityID":"business_entity_id",
+            "type": "int",
+            "key": true
+        },
+        {
+            "TerritoryID":"territory_id",
+            "type": "int",
+            "key": false
+        },
+        {
+            "SalesQuota":"sales_quota",
+            "type": "double",
+            "key": false
+        },
+        {
+            "Bonus":"bonus",
+            "type": "double",
+            "key": false
+        },
+        {
+            "CommissionPct":"commission_pct",
+            "type": "double",
+            "key": false
+        },
+        {
+            "SalesYTD":"sales_ytd",
+            "type": "double",
+            "key": false
+        },
+        {
+            "SalesLastYear":"saleslast_year",
+            "type": "double",
+            "key": false
+        },
+        {
+            "ModifiedDate":"modified_date",
+            "type": "datetime",
+            "key": false
+        }
+    ]
+}

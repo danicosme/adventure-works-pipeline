@@ -1,0 +1,19 @@
+{
+    "sales_offer_product":[
+        {
+            "SpecialOfferID":"special_offer_id",
+            "type": "int",
+            "key": true
+        },
+        {
+            "ProductID":"product_id",
+            "type": "int",
+            "key": true
+        },
+        {
+            "ModifiedDate":"modified_date",
+            "type": "datetime",
+            "key": false
+        }
+    ]
+}

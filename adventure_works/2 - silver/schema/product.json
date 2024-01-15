@@ -1,0 +1,124 @@
+{
+    "product":[
+        {
+            "ProductID": "product_id",
+            "type": "int",
+            "key": true
+        },
+        {
+            "Name": "name",
+            "type": "string",
+            "key": false
+        },
+        {
+            "ProductNumber": "product_number",
+            "type": "string",
+            "key": false
+        },
+        {
+            "MakeFlag": "make_flag",
+            "type": "boolean",
+            "key": false
+        },
+        {
+            "FinishedGoodsFlag": "finished_goods_flag",
+            "type": "boolean",
+            "key": false
+        },
+        {
+            "Color": "color",
+            "type": "string",
+            "key": false
+        },
+        {
+            "SafetyStockLevel": "safety_stock_level",
+            "type": "int",
+            "key": false
+        },
+        {
+            "ReorderPoint": "reorder_point",
+            "type": "int",
+            "key": false
+        },
+        {
+            "StandardCost": "standard_cost",
+            "type": "double",
+            "key": false
+        },
+        {
+            "ListPrice": "list_price",
+            "type": "double",
+            "key": false
+        },
+        {
+            "Size": "size",
+            "type": "string",
+            "key": false
+        },
+        {
+            "SizeUnitMeasureCode": "size_unit_measure_code",
+            "type": "string",
+            "key": false
+        },
+        {
+            "WeightUnitMeasureCode": "weight_unit_measure_code",
+            "type": "string",
+            "key": false
+        },
+        {
+            "Weight": "weight",
+            "type": "double",
+            "key": false
+        },
+        {
+            "DaysToManufacture": "days_manufacture",
+            "type": "int",
+            "key": false
+        },
+        {
+            "ProductLine": "product_line",
+            "type": "string",
+            "key": false
+        },
+        {
+            "Class": "class",
+            "type": "string",
+            "key": false
+        },
+        {
+            "Style": "style",
+            "type": "string",
+            "key": false
+        },
+        {
+            "ProductSubcategoryID": "product_subcategory_id",
+            "type": "int",
+            "key": false
+        },
+        {
+            "ProductModelID": "product_model_id",
+            "type": "int",
+            "key": false
+        },
+        {
+            "SellStartDate": "sell_start_date",
+            "type": "datetime",
+            "key": false
+        },
+        {
+            "SellEndDate": "sell_end_date",
+            "type": "datetime",
+            "key": false
+        },
+        {
+            "DiscontinuedDate": "discontinued_date",
+            "type": "datetime",
+            "key": false
+        },
+        {
+            "ModifiedDate":"modified_date",
+            "type": "datetime",
+            "key": false
+        }
+    ]
+}

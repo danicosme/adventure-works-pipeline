@@ -1,0 +1,54 @@
+{
+    "sales_order_detail":[
+        {
+            "SalesOrderID":"sales_order_id",
+            "type": "int",
+            "key": true
+        },
+        {
+            "SalesOrderDetailID":"sales_order_detail_id",
+            "type": "int",
+            "key": true
+        },
+        {
+            "CarrierTrackingNumber":"carrier_tracking_number",
+            "type": "string",
+            "key": false
+        },
+        {
+            "OrderQty":"order_quantity",
+            "type": "int",
+            "key": false
+        },
+        {
+            "ProductID":"product_id",
+            "type": "int",
+            "key": false
+        },
+        {
+            "SpecialOfferID":"special_offer_id",
+            "type": "int",
+            "key": false
+        },
+        {
+            "UnitPrice":"unit_price",
+            "type": "double",
+            "key": false
+        },
+        {
+            "UnitPriceDiscount":"unit_price_discount",
+            "type": "double",
+            "key": false
+        },
+        {
+            "LineTotal":"line_total",
+            "type": "double",
+            "key": false
+        },
+        {
+            "ModifiedDate":"modified_date",
+            "type": "datetime",
+            "key": false
+        }
+    ]
+}

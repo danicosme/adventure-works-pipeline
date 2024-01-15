@@ -5,6 +5,8 @@ import os
 from dotenv import load_dotenv
 import awswrangler as wr
 
+logger = loguru.logger
+load_dotenv()
 
 def sql_connection():
     """Cria a conexão com o banco Microsoft SQL Server
@@ -105,9 +107,6 @@ def write_s3(df, entity):
 
 
 def main():
-    logger = loguru.logger
-    load_dotenv()
-
     try:
         logger.info('Estabelecendo conexão com o MSSQL')
         conn = sql_connection()
