@@ -1,0 +1,64 @@
+{
+    "person":[
+        {
+            "BusinessEntityID":"business_entity_id",
+            "type": "int",
+            "key": true
+        },
+        {
+            "PersonType":"PersonType",
+            "type": "string",
+            "key": false
+        },
+        {
+            "NameStyle":"NameStyle",
+            "type": "int",
+            "key": false
+        },
+        {
+            "Title":"title",
+            "type": "string",
+            "key": false
+        },
+        {
+            "FirstName":"first_name",
+            "type": "int",
+            "key": false
+        },
+        {
+            "MiddleName":"middle_name",
+            "type": "int",
+            "key": false
+        },
+        {
+            "LastName":"last_name",
+            "type": "string",
+            "key": false
+        },
+        {
+            "Suffix":"suffix",
+            "type": "string",
+            "key": false
+        },
+        {
+            "EmailPromotion":"email_promotion",
+            "type": "int",
+            "key": false
+        },
+        {
+            "AdditionalContactInfo":"additional_contact_info",
+            "type": "string",
+            "key": false
+        },
+        {
+            "Demographics":"demographics",
+            "type": "string",
+            "key": false
+        },
+        {
+            "ModifiedDate":"modified_date",
+            "type": "datetime",
+            "key": false
+        }
+    ]
+}

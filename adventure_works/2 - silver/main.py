@@ -8,6 +8,10 @@ logger = loguru.logger
 def read_file(path):
     return wr.s3.read_parquet(path=path)
 
+def read_json(path):
+    with open(path) as f:
+        return json.loads(f.read())
+
 def lambda_handler(event, context):
     logger.info('Iniciando o tratamento de mensagens')
     records = event['Records']
@@ -22,7 +26,14 @@ def lambda_handler(event, context):
         logger.info(f'Lendo entidade {entity} do S3 {path}')
         df = read_file(path)
 
-        print(df)
+        logger.info('Tratando tipos de dados')
+        data_types = read_json(f'adventure_works/2 - silver/schema/{entity}.json')
+
+        for column in data_types[entity]:
+            for k, v in column.items():
+                df.rename(columns={k:v})
+            
+        print('ok')
         
 
 

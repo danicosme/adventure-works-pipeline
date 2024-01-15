@@ -1,0 +1,34 @@
+{
+    "customer":[
+        {
+            "CustomerID": "customer_id",
+            "type": "int",
+            "key": true
+        },
+        {
+            "PersonID": "person_id",
+            "type": "int",
+            "key": false
+        },
+        {
+            "StoreID": "store_id",
+            "type": "int",
+            "key": false
+        },
+        {
+            "TerritoryID": "territory_id",
+            "type": "int",
+            "key": false
+        },
+        {
+            "AccountNumber": "account_number",
+            "type": "string",
+            "key": false
+        },
+        {
+            "ModifiedDate":"modified_date",
+            "type": "datetime",
+            "key": false
+        }
+    ]
+}
