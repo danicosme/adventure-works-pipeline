@@ -122,7 +122,7 @@
         },
         {
             "ModifiedDate":"modified_date",
-            "type": "datetime",
+            "type": "date",
             "key": false
         }
     ]

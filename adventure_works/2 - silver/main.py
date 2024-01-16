@@ -12,6 +12,16 @@ def read_json(path):
     with open(path) as f:
         return json.loads(f.read())
 
+def rename_columns(df,old,new):
+    return df.rename(columns={old:new})
+
+def apply_data_type(df, column, data_type):
+    if data_type == 'str':
+        df[column] = df[column].apply(str)
+    else:
+        df[column] = df[column].astype(data_type)
+    return df
+
 def lambda_handler(event, context):
     logger.info('Iniciando o tratamento de mensagens')
     records = event['Records']
@@ -29,9 +39,13 @@ def lambda_handler(event, context):
         logger.info('Tratando tipos de dados')
         data_types = read_json(f'adventure_works/2 - silver/schema/{entity}.json')
 
-        for column in data_types[entity]:
-            for k, v in column.items():
-                df.rename(columns={k:v})
+        for table in data_types[entity]:
+            for column, properties in table.items():
+                print(column)
+                df = apply_data_type(df, column, properties['type'])
+                df = rename_columns(df, column, properties['rename'])
+        
+        logger.info('Removendo duplicidades')
             
         print('ok')
         
