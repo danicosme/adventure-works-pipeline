@@ -1,44 +1,68 @@
 {
     "sales_order_person":[
         {
-            "BusinessEntityID":"business_entity_id",
-            "type": "int",
-            "key": true
+            "BusinessEntityID":
+            {
+                "rename":"business_entity_id",
+                "type": "int",
+                "key": true
+            }
         },
         {
-            "TerritoryID":"territory_id",
-            "type": "int",
-            "key": false
+            "TerritoryID":
+            {
+                "rename":"territory_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "SalesQuota":"sales_quota",
-            "type": "double",
-            "key": false
+            "SalesQuota":
+            {
+                "rename":"sales_quota",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "Bonus":"bonus",
-            "type": "double",
-            "key": false
+            "Bonus":
+            {
+                "rename":"bonus",
+                "type": "double",
+                "key": false
+            }
+        },
+        {   
+            "CommissionPct":
+            {
+                "rename":"commission_pct",
+                "type": "double",
+                "key": false
+            }
+        },
+        {  
+            "SalesYTD":
+            {
+                "rename":"sales_ytd",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "CommissionPct":"commission_pct",
-            "type": "double",
-            "key": false
+            "SalesLastYear":
+            {
+                "rename":"saleslast_year",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "SalesYTD":"sales_ytd",
-            "type": "double",
-            "key": false
-        },
-        {
-            "SalesLastYear":"saleslast_year",
-            "type": "double",
-            "key": false
-        },
-        {
-            "ModifiedDate":"modified_date",
-            "type": "date",
-            "key": false
+          "ModifiedDate":
+            {
+                "rename":"modified_date",
+                "type": "date",
+                "key": true
+            }
         }
     ]
 }

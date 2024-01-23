@@ -84,9 +84,9 @@ def create_partition_cols(df):
     Returns:
         - dataframe com as colunas de partição
     """
-    df['year'] = df['dh_ingestao_bronze'].dt.strftime('%Y').astype('int')
-    df['month'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m').astype('int')
-    df['day'] = df['dh_ingestao_bronze'].dt.strftime('%Y%m%d').astype('int')
+    df['year'] = df['dt_ingestion_bronze'].dt.strftime('%Y').astype('int')
+    df['month'] = df['dt_ingestion_bronze'].dt.strftime('%Y%m').astype('int')
+    df['day'] = df['dt_ingestion_bronze'].dt.strftime('%Y%m%d').astype('int')
 
     return df
 

@@ -56,11 +56,12 @@
                     "key": false
                 }
         }, 
-        {"ModifiedDate":
+        {
+            "ModifiedDate":
             {
                 "rename":"modified_date",
                 "type": "datetime64[ns]",
-                "key": false
+                "key": true
             }
         }
     ]

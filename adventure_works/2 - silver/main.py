@@ -22,6 +22,21 @@ def apply_data_type(df, column, data_type):
         df[column] = df[column].astype(data_type)
     return df
 
+def create_partition_cols(df):
+    """Cria as colunas de partição com base na data de modificação.
+
+    Args:
+        - dataframe
+
+    Returns:
+        - dataframe com as colunas de partição
+    """
+    df['year'] = df['modified_date'].dt.strftime('%Y').astype('int')
+    df['month'] = df['modified_date'].dt.strftime('%Y%m').astype('int')
+    df['day'] = df['modified_date'].dt.strftime('%Y%m%d').astype('int')
+
+    return df
+
 def lambda_handler(event, context):
     logger.info('Iniciando o tratamento de mensagens')
     records = event['Records']
@@ -39,13 +54,17 @@ def lambda_handler(event, context):
         logger.info('Tratando tipos de dados')
         data_types = read_json(f'adventure_works/2 - silver/schema/{entity}.json')
 
+        pk_list = []
         for table in data_types[entity]:
             for column, properties in table.items():
                 print(column)
                 df = apply_data_type(df, column, properties['type'])
                 df = rename_columns(df, column, properties['rename'])
+                if properties['key'] == True:
+                    pk_list.append(properties['rename'])
         
         logger.info('Removendo duplicidades')
+        df.sort_values(by=['modified_date'], ascending=True).drop_duplicates(subset=pk_list, keep='last')
             
         print('ok')
         

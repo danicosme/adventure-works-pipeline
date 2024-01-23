@@ -7,5 +7,5 @@ SELECT TOP 5
 	,SalesYTD
 	,SalesLastYear
 	,ModifiedDate
-	,CURRENT_TIMESTAMP AS dh_ingestao_bronze
+	,CURRENT_TIMESTAMP AS dt_ingestion_bronze
 FROM sales.SalesPerson
