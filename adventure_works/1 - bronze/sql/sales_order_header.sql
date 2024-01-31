@@ -23,6 +23,7 @@ SELECT TOP 5
 	,Freight
 	,TotalDue
 	,Comment
+	,CreationDate
 	,ModifiedDate
 	,CURRENT_TIMESTAMP AS dt_ingestion_bronze
 FROM sales.SalesOrderHeader

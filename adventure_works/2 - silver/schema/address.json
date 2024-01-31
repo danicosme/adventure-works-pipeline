@@ -23,7 +23,7 @@
                     "type": "string",
                     "key": false
                 }
-        }, 
+        },
         {
             "City":
                 {
@@ -31,7 +31,7 @@
                     "type": "string",
                     "key": false
                 }
-        }, 
+        },
         {
             "StateProvinceID":
                 {
@@ -47,7 +47,7 @@
                     "type": "string",
                     "key": false
                 }
-        }, 
+        },
         {
             "SpatialLocation":
                 {
@@ -55,7 +55,15 @@
                     "type": "str",
                     "key": false
                 }
-        }, 
+        },
+        {
+            "CreationDate":
+            {
+                "rename":"creation_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
+        },
         {
             "ModifiedDate":
             {

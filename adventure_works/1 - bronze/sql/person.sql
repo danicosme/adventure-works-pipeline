@@ -10,6 +10,7 @@ SELECT TOP 5
 	,EmailPromotion
 	,AdditionalContactInfo
 	,Demographics
+	,CreationDate
 	,ModifiedDate
 	,CURRENT_TIMESTAMP AS dt_ingestion_bronze
 FROM person.person

@@ -6,6 +6,7 @@ SELECT TOP 5
 	,StateProvinceID
 	,PostalCode
 	,SpatialLocation
+	,CreationDate
 	,ModifiedDate
 	,CURRENT_TIMESTAMP AS dt_ingestion_bronze
 FROM person.address

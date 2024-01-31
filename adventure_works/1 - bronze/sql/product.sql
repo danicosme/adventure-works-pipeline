@@ -22,6 +22,7 @@ SELECT TOP 5
 	,SellStartDate
 	,SellEndDate
 	,DiscontinuedDate
+	,CreationDate
 	,ModifiedDate
 	,CURRENT_TIMESTAMP AS dt_ingestion_bronze
 FROM production.product

@@ -32,7 +32,7 @@
                 "key": false
             }
         },
-        {   
+        {
             "CommissionPct":
             {
                 "rename":"commission_pct",
@@ -40,7 +40,7 @@
                 "key": false
             }
         },
-        {  
+        {
             "SalesYTD":
             {
                 "rename":"sales_ytd",
@@ -53,6 +53,14 @@
             {
                 "rename":"sales_last_year",
                 "type": "double",
+                "key": false
+            }
+        },
+        {
+            "CreationDate":
+            {
+                "rename":"creation_date",
+                "type": "datetime64[ns]",
                 "key": false
             }
         },

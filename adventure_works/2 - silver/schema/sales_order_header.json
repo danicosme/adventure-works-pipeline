@@ -193,6 +193,14 @@
             }
         },
         {
+            "CreationDate":
+            {
+                "rename":"creation_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
+        },
+        {
             "ModifiedDate":
             {
                 "rename":"modified_date",
