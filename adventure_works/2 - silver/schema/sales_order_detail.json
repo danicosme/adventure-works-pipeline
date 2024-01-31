@@ -73,10 +73,10 @@
             }
         },
         {
-        "ModifiedDate":
+            "ModifiedDate":
             {
                 "rename":"modified_date",
-                "type": "date",
+                "type": "datetime64[ns]",
                 "key": true
             }
         }

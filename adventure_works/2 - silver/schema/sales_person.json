@@ -51,16 +51,16 @@
         {
             "SalesLastYear":
             {
-                "rename":"saleslast_year",
+                "rename":"sales_last_year",
                 "type": "double",
                 "key": false
             }
         },
         {
-          "ModifiedDate":
+            "ModifiedDate":
             {
                 "rename":"modified_date",
-                "type": "date",
+                "type": "datetime64[ns]",
                 "key": true
             }
         }
