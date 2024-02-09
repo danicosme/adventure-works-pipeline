@@ -164,7 +164,7 @@
             "SellStartDate":
             {
                 "rename": "sell_start_date",
-                "type": "datetime",
+                "type": "datetime64[ns]",
                 "key": false
             }
         },
@@ -172,14 +172,14 @@
             "SellEndDate":
             {
                 "rename": "sell_end_date",
-                "type": "datetime",
+                "type": "datetime64[ns]",
                 "key": false
             }
         },
         {
             "DiscontinuedDate":{
                 "rename": "discontinued_date",
-                "type": "datetime",
+                "type": "datetime64[ns]",
                 "key": false
             }
         },

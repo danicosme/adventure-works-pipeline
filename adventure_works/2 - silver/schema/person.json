@@ -36,7 +36,7 @@
             "FirstName":
             {
                 "rename":"first_name",
-                "type": "int",
+                "type": "string",
                 "key": false
             }
         },
@@ -44,7 +44,7 @@
             "MiddleName":
             {
                 "rename":"middle_name",
-                "type": "int",
+                "type": "string",
                 "key": false
             }
         },

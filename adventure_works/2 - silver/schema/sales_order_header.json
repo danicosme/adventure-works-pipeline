@@ -20,7 +20,7 @@
             "OrderDate":
             {
                 "rename":"order_date",
-                "type": "date",
+                "type": "datetime64[ns]",
                 "key": false
             }
         },
@@ -28,7 +28,7 @@
             "DueDate":
             {
                 "rename":"due_date",
-                "type": "date",
+                "type": "datetime64[ns]",
                 "key": false
             }
         },
@@ -36,7 +36,7 @@
             "ShipDate":
             {
                 "rename":"ship_date",
-                "type": "date",
+                "type": "datetime64[ns]",
                 "key": false
             }
         },

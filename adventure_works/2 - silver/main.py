@@ -6,19 +6,60 @@ logger = loguru.logger
 
 
 def read_file(path):
+    """Lê o arquivo do s3
+
+    Args:
+        - path s3
+
+    Returns:
+        - dataframe em formato pandas
+    """
     return wr.s3.read_parquet(path=path)
 
 
 def read_json(path):
+    """Lê os arquivos json por entidade
+
+    Args:
+        - path json
+
+    Returns:
+        - dicionário com data types e colunas
+    """
     with open(path) as f:
         return json.loads(f.read())
 
 
 def rename_columns(df, old, new):
+    """Renomeia as colunas do dataframe
+
+    Args:
+        - dataframe
+        - old column
+        - new column
+
+    Returns:
+        - dataframe renomeado
+    """
     return df.rename(columns={old: new})
 
 
 def apply_data_type(df, column, data_type):
+    """Transforma o tipo de dado das colunas
+
+    Args:
+        - dataframe
+        - column
+        - data_type
+
+    Returns:
+        - dataframe tratado
+    """
+    # Preenchendo nulos
+    if data_type in ('int', 'double'):
+        df[[column]] = df[[column]].fillna(value=0)
+
+    # Tipando colunas
     if data_type == 'str':
         df[column] = df[column].apply(str)
     else:
@@ -130,7 +171,7 @@ def main():
                         "arn": "arn:aws:s3:::adventure-works-bronze"
                     },
                     "object": {
-                        "key": "address/year=2024/month=202401/day=20240131/0808a0ca790e4d50a31f2d7c851e3549.snappy.parquet",
+                        "key": "sales_person/year=2024/month=202401/day=20240131/8ae07c3405504f62bf33b63aeb6e1f86.snappy.parquet",
                         "size": 1024,
                         "eTag": "0123456789abcdef0123456789abcdef",
                         "sequencer": "0A1B2C3D4E5F678901"
