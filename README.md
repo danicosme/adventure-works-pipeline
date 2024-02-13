@@ -16,23 +16,22 @@ O pipeline é composto por algumas etapas, utilizando os seguintes serviços AWS
 - Amazon Athena: Consulta dos dados armazenados no S3.
 
 ## Estrutura do Projeto
-.
-├── adventure_works
-│ ├── 1_bronze
-│ │ ├── sql
-│ │ │ └── extracao.py # Código Python para extração de dados
-│ └── 2_silver
-│ ├── schema
-│ │ └── main.py # Código Python para limpeza e transformação de dados
-├── poetry.lock # Bloqueio de versões gerado pelo Poetry
-├── .pre-commit-config.yaml # Configuração do pre-commit hooks
-├── pyproject.toml # Configuração de pacotes do projeto
-└── README.md # Este arquivo
+   .
+   ├── adventure_works
+   │ ├── 1_bronze
+   │ │ ├── sql
+   │ │ │ └── extracao.py # Código Python para extração de dados
+   │ └── 2_silver
+   │ ├── schema
+   │ │ └── main.py # Código Python para limpeza e transformação de dados
+   ├── poetry.lock # Bloqueio de versões gerado pelo Poetry
+   ├── .pre-commit-config.yaml # Configuração do pre-commit hooks
+   ├── pyproject.toml # Configuração de pacotes do projeto
+   └── README.md # Este arquivo
 
 ## Configuração
 
 1. **Instalação de Dependências**:
    ```bash
    poetry install
-
 
