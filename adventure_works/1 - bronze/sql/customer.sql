@@ -1,4 +1,4 @@
-SELECT TOP 5
+SELECT TOP 50
 	CustomerID
 	,PersonID
 	,StoreID

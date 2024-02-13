@@ -99,46 +99,50 @@ def write_s3(df, entity):
 
 
 def lambda_handler(event, context):
-    logger.info('Iniciando o tratamento de mensagens')
-    records = event['Records']
+    try:
+        logger.info('Iniciando o tratamento de mensagens')
+        records = event['Records']
 
-    for record in records:
-        bucket = record['s3']['bucket']['name']
-        object_key = record['s3']['object']['key']
-        path = f's3://{bucket}/{object_key}'
+        for record in records:
+            bucket = record['s3']['bucket']['name']
+            object_key = record['s3']['object']['key']
+            path = f's3://{bucket}/{object_key}'
 
-        entity = object_key.split('/')[0]
+            entity = object_key.split('/')[0]
 
-        logger.info(f'Lendo entidade {entity} do S3 {path}')
-        df = read_file(path)
+            logger.info(f'Lendo entidade {entity} do S3 {path}')
+            df = read_file(path)
 
-        logger.info('Tratando tipos de dados')
-        data_types = read_json(
-            f'adventure_works/2 - silver/schema/{entity}.json')
+            logger.info('Tratando tipos de dados')
+            data_types = read_json(
+                f'adventure_works/2 - silver/schema/{entity}.json')
 
-        pk_list = []
-        for table in data_types[entity]:
-            for column, properties in table.items():
-                print(column)
-                df = apply_data_type(df, column, properties['type'])
-                df = rename_columns(df, column, properties['rename'])
-                if properties['key'] is True:
-                    pk_list.append(properties['rename'])
+            pk_list = []
+            for table in data_types[entity]:
+                for column, properties in table.items():
+                    print(column)
+                    df = apply_data_type(df, column, properties['type'])
+                    df = rename_columns(df, column, properties['rename'])
+                    if properties['key'] is True:
+                        pk_list.append(properties['rename'])
 
-        logger.info('Removendo duplicidades')
-        df.sort_values(by=['modified_date'], ascending=True).drop_duplicates(
-            subset=pk_list, keep='last')
+            logger.info('Removendo duplicidades')
+            df.sort_values(by=['modified_date'], ascending=True).drop_duplicates(
+                subset=pk_list, keep='last')
 
-        if not df.empty:
-            logger.info('Criando colunas de partição')
-            df = create_partition_cols(df)
+            if not df.empty:
+                logger.info('Criando colunas de partição')
+                df = create_partition_cols(df)
 
-            logger.info(
-                f"Gravando dataframe {entity} no s3:\n{df.head(1)}")
-            write_s3(df, entity)
+                logger.info(
+                    f"Gravando dataframe {entity} no s3:\n{df.head(1)}")
+                write_s3(df, entity)
 
-        else:
-            logger.warning(f"Dataframe {entity} vazio")
+            else:
+                logger.warning(f"Dataframe {entity} vazio")
+
+    except Exception as e:
+        logger.error(f'Erro durante extração e carga na camada silver: {e}')
 
 
 def main():
@@ -171,7 +175,7 @@ def main():
                         "arn": "arn:aws:s3:::adventure-works-bronze"
                     },
                     "object": {
-                        "key": "sales_person/year=2024/month=202401/day=20240131/8ae07c3405504f62bf33b63aeb6e1f86.snappy.parquet",
+                        "key": "address/year=2024/month=202402/day=20240213/30038125c3974147b075d2929eaa8568.snappy.parquet",
                         "size": 1024,
                         "eTag": "0123456789abcdef0123456789abcdef",
                         "sequencer": "0A1B2C3D4E5F678901"
