@@ -1,124 +1,203 @@
 {
     "product":[
         {
-            "ProductID": "product_id",
-            "type": "int",
-            "key": true
+            "ProductID":
+            {
+                "rename": "product_id",
+                "type": "int",
+                "key": true
+            }
         },
         {
-            "Name": "name",
-            "type": "string",
-            "key": false
+            "Name":
+            {
+                "rename": "name",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "ProductNumber": "product_number",
-            "type": "string",
-            "key": false
+            "ProductNumber":
+            {
+                "rename": "product_number",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "MakeFlag": "make_flag",
-            "type": "boolean",
-            "key": false
+            "MakeFlag":
+            {
+                "rename": "make_flag",
+                "type": "boolean",
+                "key": false
+            }
         },
         {
-            "FinishedGoodsFlag": "finished_goods_flag",
-            "type": "boolean",
-            "key": false
+            "FinishedGoodsFlag":
+            {
+                "rename": "finished_goods_flag",
+                "type": "boolean",
+                "key": false
+            }
         },
         {
-            "Color": "color",
-            "type": "string",
-            "key": false
+            "Color":
+            {
+                "rename": "color",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "SafetyStockLevel": "safety_stock_level",
-            "type": "int",
-            "key": false
+            "SafetyStockLevel":
+            {
+                "rename": "safety_stock_level",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "ReorderPoint": "reorder_point",
-            "type": "int",
-            "key": false
+            "ReorderPoint":
+            {
+                "rename": "reorder_point",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "StandardCost": "standard_cost",
-            "type": "double",
-            "key": false
+            "StandardCost":
+            {
+                "rename": "standard_cost",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "ListPrice": "list_price",
-            "type": "double",
-            "key": false
+            "ListPrice":
+            {
+                "rename": "list_price",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "Size": "size",
-            "type": "string",
-            "key": false
+            "Size":
+            {
+                "rename": "size",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "SizeUnitMeasureCode": "size_unit_measure_code",
-            "type": "string",
-            "key": false
+            "SizeUnitMeasureCode":
+            {
+                "rename": "size_unit_measure_code",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "WeightUnitMeasureCode": "weight_unit_measure_code",
-            "type": "string",
-            "key": false
+            "WeightUnitMeasureCode":
+            {
+                "rename": "weight_unit_measure_code",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "Weight": "weight",
-            "type": "double",
-            "key": false
+            "Weight":
+            {
+                "rename": "weight",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "DaysToManufacture": "days_manufacture",
-            "type": "int",
-            "key": false
+            "DaysToManufacture":
+            {
+                "rename": "days_manufacture",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "ProductLine": "product_line",
-            "type": "string",
-            "key": false
+                "ProductLine":
+            {
+                "rename": "product_line",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "Class": "class",
-            "type": "string",
-            "key": false
+            "Class":
+            {
+                "rename": "class",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "Style": "style",
-            "type": "string",
-            "key": false
+            "Style":
+            {
+                "rename": "style",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "ProductSubcategoryID": "product_subcategory_id",
-            "type": "int",
-            "key": false
+            "ProductSubcategoryID":
+            {
+                "rename": "product_subcategory_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "ProductModelID": "product_model_id",
-            "type": "int",
-            "key": false
+            "ProductModelID":
+            {
+                "rename": "product_model_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "SellStartDate": "sell_start_date",
-            "type": "datetime",
-            "key": false
+            "SellStartDate":
+            {
+                "rename": "sell_start_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
         },
         {
-            "SellEndDate": "sell_end_date",
-            "type": "datetime",
-            "key": false
+            "SellEndDate":
+            {
+                "rename": "sell_end_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
         },
         {
-            "DiscontinuedDate": "discontinued_date",
-            "type": "datetime",
-            "key": false
+            "DiscontinuedDate":{
+                "rename": "discontinued_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
         },
         {
-            "ModifiedDate":"modified_date",
-            "type": "datetime",
-            "key": false
+            "CreationDate":
+            {
+                "rename":"creation_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
+        },
+        {
+            "ModifiedDate":
+            {
+                "rename":"modified_date",
+                "type": "datetime64[ns]",
+                "key": true
+            }
         }
     ]
 }

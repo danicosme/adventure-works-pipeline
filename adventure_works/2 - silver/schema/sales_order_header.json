@@ -1,129 +1,212 @@
 {
     "sales_order_header":[
         {
-            "SalesOrderID":"sales_order_id",
-            "type": "int",
-            "key": true
+            "SalesOrderID":
+            {
+                "rename":"sales_order_id",
+                "type": "int",
+                "key": true
+            }
         },
         {
-            "RevisionNumber":"revision_number",
-            "type": "int",
-            "key": false
+            "RevisionNumber":
+            {
+                "rename":"revision_number",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "OrderDate":"order_date",
-            "type": "date",
-            "key": false
+            "OrderDate":
+            {
+                "rename":"order_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
         },
         {
-            "DueDate":"due_date",
-            "type": "date",
-            "key": false
+            "DueDate":
+            {
+                "rename":"due_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
         },
         {
-            "ShipDate":"ship_date",
-            "type": "date",
-            "key": false
+            "ShipDate":
+            {
+                "rename":"ship_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
         },
         {
-            "Status":"status",
-            "type": "int",
-            "key": false
+            "Status":
+            {
+                "rename":"status",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "OnlineOrderFlag":"online_order_flag",
-            "type": "boolean",
-            "key": false
+            "OnlineOrderFlag":
+            {
+                "rename":"online_order_flag",
+                "type": "boolean",
+                "key": false
+            }
         },
         {
-            "SalesOrderNumber":"sales_order_number",
-            "type": "string",
-            "key": false
+            "SalesOrderNumber":
+            {
+                "rename":"sales_order_number",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "PurchaseOrderNumber":"purchase_order_number",
-            "type": "string",
-            "key": false
+            "PurchaseOrderNumber":
+            {
+                "rename":"purchase_order_number",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "AccountNumber":"account_number",
-            "type": "string",
-            "key": false
+            "AccountNumber":
+            {
+                "rename":"account_number",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "CustomerID":"customer_id",
-            "type": "int",
-            "key": false
+            "CustomerID":
+            {
+                "rename":"customer_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "SalesPersonID":"sales_person_id",
-            "type": "int",
-            "key": false
+            "SalesPersonID":
+            {
+                "rename":"sales_person_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "TerritoryID":"territory_id",
-            "type": "int",
-            "key": false
+            "TerritoryID":
+            {
+                "rename":"territory_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "BillToAddressID":"bill_to_address_id",
-            "type": "int",
-            "key": false
+            "BillToAddressID":
+            {
+                "rename":"bill_to_address_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "ShipToAddressID":"ship_to_address_id",
-            "type": "int",
-            "key": false
+            "ShipToAddressID":
+            {
+                "rename":"ship_to_address_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "ShipMethodID":"ship_method_id",
-            "type": "int",
-            "key": false
+            "ShipMethodID":
+            {
+                "rename":"ship_method_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "CreditCardID":"credit_card_id",
-            "type": "int",
-            "key": false
+            "CreditCardID":
+            {
+                "rename":"credit_card_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "CreditCardApprovalCode":"credit_card_approval_code",
-            "type": "string",
-            "key": false
+            "CreditCardApprovalCode":
+            {
+                "rename":"credit_card_approval_code",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "CurrencyRateID":"currency_rate_id",
-            "type": "int",
-            "key": false
+            "CurrencyRateID":
+            {
+                "rename":"currency_rate_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "SubTotal":"subtotal",
-            "type": "double",
-            "key": false
+            "SubTotal":
+            {
+                "rename":"subtotal",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "TaxAmt":"tax_amt",
-            "type": "double",
-            "key": false
+            "TaxAmt":
+            {
+                "rename":"tax_amt",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "Freight":"freight",
-            "type": "double",
-            "key": false
+            "Freight":
+            {
+                "rename":"freight",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "TotalDue":"total_due",
-            "type": "double",
-            "key": false
+            "TotalDue":
+            {
+                "rename":"total_due",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "Comment":"comment",
-            "type": "string",
-            "key": false
+            "Comment":
+            {
+                "rename":"comment",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "ModifiedDate":"modified_date",
-            "type": "datetime",
-            "key": false
+            "CreationDate":
+            {
+                "rename":"creation_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
+        },
+        {
+            "ModifiedDate":
+            {
+                "rename":"modified_date",
+                "type": "datetime64[ns]",
+                "key": true
+            }
         }
     ]
 }

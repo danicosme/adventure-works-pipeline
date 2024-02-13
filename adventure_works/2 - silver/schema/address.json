@@ -1,44 +1,76 @@
 {
     "address":[
         {
-            "AddressID":"address_id",
-            "type": "int",
-            "key": true
+            "AddressID":
+                {
+                    "rename":"address_id",
+                    "type": "int",
+                    "key": true
+                }
         },
         {
-            "AddressLine1":"address_line_1",
-            "type": "string",
-            "key": false
+            "AddressLine1":
+                {
+                    "rename":"address_line_1",
+                    "type": "string",
+                    "key": false
+                }
         },
         {
-            "AddressLine2":"address_line_2",
-            "type": "string",
-            "key": false
-        }, 
-        {
-            "City":"city",
-            "type": "string",
-            "key": false
-        }, 
-        {
-            "StateProvinceID":"state_province_id",
-            "type": "int",
-            "key": false
+            "AddressLine2":
+                {
+                    "rename":"address_line_2",
+                    "type": "string",
+                    "key": false
+                }
         },
         {
-            "PostalCode":"postal_code",
-            "type": "string",
-            "key": false
-        }, 
+            "City":
+                {
+                    "rename":"city",
+                    "type": "string",
+                    "key": false
+                }
+        },
         {
-            "SpatialLocation":"spatial_location",
-            "type": "string",
-            "key": false
-        }, 
+            "StateProvinceID":
+                {
+                    "rename":"state_province_id",
+                    "type": "int",
+                    "key": false
+                }
+        },
         {
-            "ModifiedDate":"modified_date",
-            "type": "datetime",
-            "key": false
+            "PostalCode":
+                {
+                    "rename":"postal_code",
+                    "type": "string",
+                    "key": false
+                }
+        },
+        {
+            "SpatialLocation":
+                {
+                    "rename":"spatial_location",
+                    "type": "str",
+                    "key": false
+                }
+        },
+        {
+            "CreationDate":
+            {
+                "rename":"creation_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
+        },
+        {
+            "ModifiedDate":
+            {
+                "rename":"modified_date",
+                "type": "datetime64[ns]",
+                "key": true
+            }
         }
     ]
 }

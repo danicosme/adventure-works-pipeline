@@ -1,4 +1,4 @@
-SELECT TOP 5
+SELECT TOP 50
 	SalesOrderID
 	,RevisionNumber
 	,OrderDate
@@ -23,6 +23,7 @@ SELECT TOP 5
 	,Freight
 	,TotalDue
 	,Comment
+	,CreationDate
 	,ModifiedDate
-	,CURRENT_TIMESTAMP AS dh_ingestao_bronze
+	,CURRENT_TIMESTAMP AS dt_ingestion_bronze
 FROM sales.SalesOrderHeader

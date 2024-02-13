@@ -1,54 +1,92 @@
 {
     "sales_order_detail":[
         {
-            "SalesOrderID":"sales_order_id",
-            "type": "int",
-            "key": true
+            "SalesOrderID":
+            {
+                "rename":"sales_order_id",
+                "type": "int",
+                "key": true
+            }
         },
         {
-            "SalesOrderDetailID":"sales_order_detail_id",
-            "type": "int",
-            "key": true
+            "SalesOrderDetailID":
+            {
+                "rename":"sales_order_detail_id",
+                "type": "int",
+                "key": true
+            }
         },
         {
-            "CarrierTrackingNumber":"carrier_tracking_number",
-            "type": "string",
-            "key": false
+            "CarrierTrackingNumber":
+            {
+                "rename":"carrier_tracking_number",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "OrderQty":"order_quantity",
-            "type": "int",
-            "key": false
+            "OrderQty":
+            {
+                "rename":"order_quantity",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "ProductID":"product_id",
-            "type": "int",
-            "key": false
+            "ProductID":
+            {
+                "rename":"product_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "SpecialOfferID":"special_offer_id",
-            "type": "int",
-            "key": false
+            "SpecialOfferID":
+            {
+                "rename":"special_offer_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "UnitPrice":"unit_price",
-            "type": "double",
-            "key": false
+            "UnitPrice":
+            {
+                "rename":"unit_price",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "UnitPriceDiscount":"unit_price_discount",
-            "type": "double",
-            "key": false
+            "UnitPriceDiscount":
+            {
+                "rename":"unit_price_discount",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "LineTotal":"line_total",
-            "type": "double",
-            "key": false
+        "LineTotal":
+            {
+                "rename":"line_total",
+                "type": "double",
+                "key": false
+            }
         },
         {
-            "ModifiedDate":"modified_date",
-            "type": "datetime",
-            "key": false
+            "CreationDate":
+            {
+                "rename":"creation_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
+        },
+        {
+            "ModifiedDate":
+            {
+                "rename":"modified_date",
+                "type": "datetime64[ns]",
+                "key": true
+            }
         }
     ]
 }

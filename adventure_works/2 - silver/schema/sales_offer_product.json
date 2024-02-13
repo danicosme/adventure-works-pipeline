@@ -1,19 +1,36 @@
 {
     "sales_offer_product":[
         {
-            "SpecialOfferID":"special_offer_id",
-            "type": "int",
-            "key": true
+            "SpecialOfferID":
+            {
+                "rename":"special_offer_id",
+                "type": "int",
+                "key": true
+            }
         },
         {
-            "ProductID":"product_id",
-            "type": "int",
-            "key": true
+            "ProductID":
+            {
+                "rename":"product_id",
+                "type": "int",
+                "key": true
+            }
         },
         {
-            "ModifiedDate":"modified_date",
-            "type": "datetime",
-            "key": false
+            "CreationDate":
+            {
+                "rename":"creation_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
+        },
+        {
+            "ModifiedDate":
+            {
+                "rename":"modified_date",
+                "type": "datetime64[ns]",
+                "key": true
+            }
         }
     ]
 }

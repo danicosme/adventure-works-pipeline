@@ -1,4 +1,4 @@
-SELECT TOP 5
+SELECT TOP 50
 	BusinessEntityID
 	,PersonType
 	,NameStyle
@@ -10,6 +10,7 @@ SELECT TOP 5
 	,EmailPromotion
 	,AdditionalContactInfo
 	,Demographics
+	,CreationDate
 	,ModifiedDate
-	,CURRENT_TIMESTAMP AS dh_ingestao_bronze
+	,CURRENT_TIMESTAMP AS dt_ingestion_bronze
 FROM person.person

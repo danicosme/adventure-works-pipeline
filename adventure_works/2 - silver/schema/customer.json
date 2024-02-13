@@ -1,34 +1,60 @@
 {
     "customer":[
         {
-            "CustomerID": "customer_id",
-            "type": "int",
-            "key": true
+            "CustomerID":
+            {
+                "rename": "customer_id",
+                "type": "int",
+                "key": true
+            }
         },
         {
-            "PersonID": "person_id",
-            "type": "int",
-            "key": false
+            "PersonID":
+            {
+                "rename": "person_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "StoreID": "store_id",
-            "type": "int",
-            "key": false
+            "StoreID":
+            {
+                "rename": "store_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "TerritoryID": "territory_id",
-            "type": "int",
-            "key": false
+            "TerritoryID":
+            {
+                "rename": "territory_id",
+                "type": "int",
+                "key": false
+            }
         },
         {
-            "AccountNumber": "account_number",
-            "type": "string",
-            "key": false
+            "AccountNumber":
+            {
+                "rename": "account_number",
+                "type": "string",
+                "key": false
+            }
         },
         {
-            "ModifiedDate":"modified_date",
-            "type": "datetime",
-            "key": false
+            "CreationDate":
+            {
+                "rename":"creation_date",
+                "type": "datetime64[ns]",
+                "key": false
+            }
+        },
+        {
+            "ModifiedDate":
+            {
+                "rename":"modified_date",
+                "type": "datetime64[ns]",
+                "key": true
+            }
         }
     ]
 }

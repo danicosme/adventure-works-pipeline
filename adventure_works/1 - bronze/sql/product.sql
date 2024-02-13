@@ -1,4 +1,4 @@
-SELECT TOP 5
+SELECT TOP 50
 	ProductID
 	,Name
 	,ProductNumber
@@ -22,6 +22,7 @@ SELECT TOP 5
 	,SellStartDate
 	,SellEndDate
 	,DiscontinuedDate
+	,CreationDate
 	,ModifiedDate
-	,CURRENT_TIMESTAMP AS dh_ingestao_bronze
+	,CURRENT_TIMESTAMP AS dt_ingestion_bronze
 FROM production.product

@@ -1,4 +1,4 @@
-SELECT TOP 5
+SELECT TOP 50
 	BusinessEntityID
 	,TerritoryID
 	,SalesQuota
@@ -6,6 +6,7 @@ SELECT TOP 5
 	,CommissionPct
 	,SalesYTD
 	,SalesLastYear
+	,CreationDate
 	,ModifiedDate
-	,CURRENT_TIMESTAMP AS dh_ingestao_bronze
+	,CURRENT_TIMESTAMP AS dt_ingestion_bronze
 FROM sales.SalesPerson
