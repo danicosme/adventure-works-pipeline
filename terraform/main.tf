@@ -25,6 +25,14 @@ module "sqs_module"{
     source = "./sqs"
 }
 
+module "sns_sub"{
+    source = "./sns"
+}
+
+# module "s3_trigger"{
+#     source = "./s3"
+#     sns_role_arn = module.sns_module.sns_role_arn
+# }
 
 module "lambda_module"{
     source = "./lambda"
