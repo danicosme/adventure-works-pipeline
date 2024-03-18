@@ -11,6 +11,6 @@ resource "aws_s3_bucket_notification" "bucket_notification"{
 
     topic{
         topic_arn = var.sns_role_arn
-        events = ["s3:PutObejct:*"]
+        events = ["s3:ObjectCreated:*"]
     }
 }
