@@ -13,20 +13,34 @@ provider "aws"{
 
 
 # Módulo separado por recurso
-module "iam_module"{
-    source = "./iam"
+module "sqs_module"{
+    source = "./sqs"
 }
 
 module "sns_module"{
     source = "./sns"
 }
 
-module "sqs_module"{
-    source = "./sqs"
+module "iam_module"{
+    source = "./iam"
+    sqs_role_arn = module.sqs_module.sqs_role_arn
 }
 
+module "sub_module"{
+    source = "./subscriptions"
+    sns_role_arn = module.sns_module.sns_role_arn
+    sqs_role_arn = module.sqs_module.sqs_role_arn
+}
 
 module "lambda_module"{
     source = "./lambda"
     iam_role_arn = module.iam_module.iam_role_arn
+}
+
+
+module "triggers_module"{
+    source = "./triggers"
+    sns_role_arn = module.sns_module.sns_role_arn
+    lambda_role_arn = module.lambda_module.lambda_role_arn
+    sqs_role_arn = module.sqs_module.sqs_role_arn
 }
