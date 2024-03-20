@@ -15,5 +15,5 @@ resource "aws_sqs_queue" "sqs_dlq_raw_silver"{
 }
 
 output "sqs_role_arn"{
-    value = aws_sqs_queue.sqs_dlq_raw_silver.arn
+    value = aws_sqs_queue.sqs_raw_silver.arn
 }

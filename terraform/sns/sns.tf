@@ -8,7 +8,7 @@ data "aws_iam_policy_document" "topic_arn" {
     }
 
     actions   = ["SNS:Publish"]
-    resources = ["arn:aws:sns:*:*:s3-event-notification-topic"]
+    resources = ["*"]
   }
 }
 
