@@ -44,3 +44,8 @@ module "triggers_module"{
     lambda_role_arn = module.lambda_module.lambda_role_arn
     sqs_role_arn = module.sqs_module.sqs_role_arn
 }
+
+module "cloudwatch" {
+    source = "./cloudwatch"
+    lambda_function_name = module.lambda_module.lambda_function_name
+}

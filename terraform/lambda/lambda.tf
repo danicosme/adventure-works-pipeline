@@ -22,3 +22,7 @@ resource "aws_lambda_function" "lambda_silver"{
 output "lambda_role_arn"{
     value = aws_lambda_function.lambda_silver.arn
 }
+
+output "lambda_function_name"{
+  value = aws_lambda_function.lambda_silver.function_name
+}

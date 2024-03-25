@@ -24,7 +24,14 @@ resource "aws_iam_role" "lambda_role_silver"{
 data "aws_iam_policy_document" "policy_document_role_silver"{
     statement{
         effect = "Allow"
-        actions = ["sqs:SendMessage","sqs:ReceiveMessage", "sqs:DeleteMessage", "sqs:GetQueueAttributes"]
+        actions = [
+            "sqs:SendMessage",
+            "sqs:ReceiveMessage", 
+            "sqs:DeleteMessage", 
+            "sqs:GetQueueAttributes", 
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+        ]
         resources = ["*"]
     }
 }
